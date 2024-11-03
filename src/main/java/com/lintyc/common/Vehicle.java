@@ -3,7 +3,8 @@ package com.lintyc.common;
 public class Vehicle {
     private String make;
     private String model;
-    private int year;
+    //this property is directly accessible to subclasses
+    protected int year;
     private FuelType fuelType;
 
     public enum FuelType {DIESEL, ELECTRIC, HYBRID, PETROL, PLUGIN_HYBRID}
