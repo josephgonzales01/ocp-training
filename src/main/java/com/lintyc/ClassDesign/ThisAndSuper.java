@@ -4,7 +4,7 @@ package com.lintyc.ClassDesign;
 import com.lintyc.common.Vehicle;
 
 class Car extends Vehicle {
-    //Below year property also exist on parent Vehicle
+    //Below year property also exist on parent Vehicle but this year property is a separate copy
     protected int year = 1995;
 
     public Car(String make, String model, int year, FuelType fuelType) {

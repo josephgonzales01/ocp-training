@@ -21,7 +21,8 @@ public final class FinalClass extends Vehicle {
     4. Don’t allow referenced mutable objects to be modified.
     5. Use a constructor to set all properties of the object, making a copy if needed.
  */
-final class Animal { // Not an immutable object declaration
+final class Animal {
+    // making it final still not make it an immutable property, its contents can be modified
     private final ArrayList<String> favoriteFoods;
 
     public Animal(ArrayList<String> favoriteFoods) {
@@ -31,7 +32,8 @@ final class Animal { // Not an immutable object declaration
         //is not quite immutable, caller might update their own reference to favoriteFoods being passed
         //this.favoriteFoods = favoriteFoods;
 
-        //this is now immutable caller does not have the new reference of ArrayList, this called defensive copy
+        //this is now immutable property caller does not have the new reference of ArrayList, this called a defensive copy
+        //and we don't have getters for this property
         this.favoriteFoods = new ArrayList<>(favoriteFoods);
     }
 
